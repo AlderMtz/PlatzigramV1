@@ -52,51 +52,79 @@ body {
 }
 
 .headedr__search {
-    margin: 0;
-  }
-  .navbar-collapse {
-    display: contents;
-  }
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-  #main-navbar .container {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    justify-content: space-between;
-  }
-  #message-icon{
-    margin-right: -5rem;
-  }
-  #profile-section{
-    margin-left: -8rem;
-  }
+  margin: 0;
+}
+.navbar-collapse {
+  display: contents;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+#main-navbar .container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  justify-content: space-between;
+}
+#message-icon {
+  margin-right: -5rem;
+}
+#profile-section {
+  margin-left: -8rem;
+}
+#card-notifi {
+  text-align: start;
+  border: solid rgba(192, 192, 192, 0.514) 1px;
+  padding: 10px;
+  border-radius: 25px;
+  width: 40vw;
+}
 
 @media screen and (max-width: 1200px) {
-  
-  #message-icon{
+  #message-icon {
     margin-right: 0rem;
   }
   #main-navbar .container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-
+  .col-12 {
+    flex: auto !important;
+  }
+  .col-lg-12 {
+    width: 50% !important;
+  }
 }
 @media screen and (max-width: 1000px) {
-  
-    #message-icon{
-      margin-right: 0rem;
-    }
-    #profile-section{
-        margin-left: -4rem;
-      }
-    #main-navbar .container {
-      padding-left: 0rem;
-      padding-right: 0rem;
-    }
+  #message-icon {
+    margin-right: 0rem;
   }
+  #profile-section {
+    margin-left: -4rem;
+  }
+  #main-navbar .container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  #directs {
+    width: 60%;
+  }
+  #directs1 {
+    display: block !important;
+  }
+  #directs2 {
+    display: contents;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-12 {
+    flex: auto !important;
+  }
+  #directs3 {
+    display: block !important;
+  }
+}

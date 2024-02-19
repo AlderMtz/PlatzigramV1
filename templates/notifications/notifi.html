@@ -18,7 +18,7 @@
         {% for notification in notifications %}
             {% if  notification.sender != request.user%}
                 {% if notification.notification_type == 2 %}
-                <div class="side-menu__user-profile d-flex align-items-center justify-items-center " style="text-align: start; border: solid rgba(192, 192, 192, 0.514) 1px; padding: 10px; border-radius: 25px; width:40vw; height:20vh;">
+                <div class="side-menu__user-profile d-flex align-items-center justify-items-center " id="card-notifi">
                     <a href="" class="delete"></a>
                     <article class="media">
                         <a href=" {% url 'users:detail' notification.sender.username %} " class="side-menu__user-avatar ml-1 mt-2">
@@ -50,7 +50,7 @@
                 {% endif %}
 
                 {% if notification.notification_type == 3 %}
-                <div class="side-menu__user-profile d-flex align-items-center justify-items-center " style="text-align: start; border: solid rgba(192, 192, 192, 0.514) 1px; padding: 10px; border-radius: 25px; width:40vw; height:20vh;">
+                <div class="side-menu__user-profile d-flex align-items-center justify-items-center " id="card-notifi">
                     <a href="" class="delete"></a>
                     <article class="media">
                         <a href=" {% url 'users:detail' notification.sender.username %} " class="side-menu__user-avatar ml-1 mt-2">
@@ -80,7 +80,7 @@
 
                 <!-- FOR LIKE -->
                 {% if notification.notification_type == 1 %}
-                    <div class="side-menu__user-profile d-flex align-items-center justify-items-center " style="text-align: start; border: solid rgba(192, 192, 192, 0.514) 1px; padding: 10px; border-radius: 25px; width:40vw; height:20vh;">
+                    <div class="side-menu__user-profile d-flex align-items-center justify-items-center" id="card-notifi" >
                         <a href="{% comment %} {% url 'delete-notification' notification.id %} {% endcomment %}" class="delete"></a>
                         <article class="media">
                             <a href=" {% url 'users:detail' notification.sender.username %} " class="side-menu__user-avatar ml-1 mt-2">
