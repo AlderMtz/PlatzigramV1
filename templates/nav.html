@@ -5,8 +5,8 @@
         <a class="navbar-brand pr-5" style="border-right: 1px solid #efefef;" href="{% url "posts:feed" %}">
             <img src="{% static "img/instagram.png" %}" height="45" class="d-inline-block align-top"/>
         </a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
+        <div class="">
+            <ul class="navbar" id="profile-section">
                 {#Profile button.#}
                 <li class="nav-item">
                     <a href="{% url "users:detail" request.user.username %}">
@@ -33,12 +33,12 @@
             {#Search modo#}
         </div >
         <form action="{% url 'directs:userSearch' %}" method="GET" >
-            <div class="headedr__search" style="margin-right:19rem;">
+            <div class="headedr__search">
                 <input type="text" placeholder="Search Account" name="q" value="{{ request.GET.q }}" required>
                 <button class="btn btn-primary" type="submit">Search</button>
             </div>
         </form>
-        <li class="nav-item nav-icon position-relative "  style="list-style: none;">
+        <li class="nav-item nav-icon position-relative " id="message-icon"  style="list-style: none;">
             <a href="{% url "directs:message" %}" >
                 <i class="fa-regular fa-comments " style="font-size: 2.2rem;"></i>
                 {% if unread_notifi %}
